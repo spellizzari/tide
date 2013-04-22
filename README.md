@@ -1,4 +1,4 @@
-tide
-====
+tide - Typescript Integrated Development Environment
+====================================================
 
-Typescript Integrated Development Environment
+More will be added later.
