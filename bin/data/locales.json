@@ -1,0 +1,70 @@
+﻿{
+	"MENU_FILE": {
+		"fr": "Fichier",
+		"en": "File"
+	},
+	"MENU_NEW": {
+		"fr": "Nouveau...",
+		"en": "New..."
+    },
+	"MENU_OPEN": {
+		"fr": "Ouvrir...",
+		"en": "Open..."
+    },
+	"MENU_OPEN_RECENT_FILE": {
+		"fr": "Fichiers récents",
+		"en": "Recent Files"
+    },
+	"MENU_OPEN_RECENT_PROJECT": {
+		"fr": "Projets récents",
+		"en": "Recent Projects"
+    },
+	"MENU_SAVE": {
+		"fr": "Sauvegarder",
+		"en": "Save"
+    },
+	"MENU_SAVE_AS": {
+		"fr": "Sauvegarder sous...",
+		"en": "Save As..."
+    },
+	"MENU_SAVE_ALL": {
+		"fr": "Sauvegarder tout",
+		"en": "Save All"
+    },
+	"MENU_CLOSE": {
+		"fr": "Fermer",
+		"en": "Close"
+    },
+	"MENU_QUIT": {
+		"fr": "Quitter",
+		"en": "Quit"
+    },
+	"MENU_EDIT": {
+		"fr": "Edition"
+		"en": "Edit"
+    }
+	"MENU_VIEW": {
+		"fr": "Voir",
+		"en": "View"
+    },
+	"MENU_PROJECT": {
+		"fr": "Projet",
+		"en": "Project"
+	},
+	"MENU_BUILD": {
+		"fr": "Construire",
+		"en": "Build"
+	},
+	"MENU_DEBUG": {
+		"fr": "Débogage",
+		"en": "Debug"
+	},
+	"MENU_TOOLS": {
+		"fr": "Outils",
+		"en": "Tools"
+	},
+	"MENU_HELP": {
+		"fr": "Aide",
+		"en": "Help"
+	}
+}

@@ -11,6 +11,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="bin\application\tide.js" />
     <Content Include="bin\components\ace\ace.js" />
     <Content Include="bin\components\ace\ext-elastic_tabstops_lite.js" />
     <Content Include="bin\components\ace\ext-emmet.js" />
@@ -145,7 +146,7 @@
     <Content Include="bin\components\knockout\knockout.mapping-2.0.js" />
     <Content Include="bin\data\icons\app-16.png" />
     <Content Include="bin\data\icons\app.png" />
-    <Content Include="bin\data\Locales.xml" />
+    <Content Include="bin\data\locales.json" />
     <Content Include="bin\index.html" />
     <Content Include="bin\package.json" />
     <Content Include="bin\themes\default\style.css" />
@@ -153,19 +154,26 @@
     <Content Include="bin\themes\default\templates\UIDockPanel.html" />
     <Content Include="bin\themes\default\templates\UIMenuBar.html" />
     <Content Include="bin\themes\default\templates\UIMenuItem.html" />
+    <Content Include="lib\tide.d.ts" />
+    <Content Include="lib\tide.js" />
     <Content Include="make.js" />
     <Content Include="package.json" />
+    <Content Include="src\core\tools.ts" />
+    <Content Include="src\core\ui-base\uiTemplates.ts" />
+    <Content Include="src\core\ui-base\uiStylesheets.ts" />
+    <Content Include="src\core\ui-base\uiManager.ts" />
+    <Content Include="src\core\ui-base\uiLocales.ts" />
+    <Content Include="src\core\ui-base\uiParts.ts" />
     <Content Include="src\tide.ts" />
-    <Content Include="src\definitions\DefinitelyTyped\ace\ace.d.ts" />
-    <Content Include="src\definitions\DefinitelyTyped\bootstrap\Bootstrap.d.ts" />
-    <Content Include="src\definitions\DefinitelyTyped\jquery\jquery.d.ts" />
-    <Content Include="src\definitions\DefinitelyTyped\knockout.mapping\knockout.mapping.d.ts" />
-    <Content Include="src\definitions\DefinitelyTyped\knockout\knockout.d.ts" />
-    <Content Include="src\definitions\DefinitelyTyped\node\node.d.ts" />
-    <Content Include="src\exceptions.ts" />
-    <Content Include="src\utils.ts" />
+    <Content Include="src\inc\DefinitelyTyped\ace\ace.d.ts" />
+    <Content Include="src\inc\DefinitelyTyped\bootstrap\Bootstrap.d.ts" />
+    <Content Include="src\inc\DefinitelyTyped\jquery\jquery.d.ts" />
+    <Content Include="src\inc\DefinitelyTyped\knockout.mapping\knockout.mapping.d.ts" />
+    <Content Include="src\inc\DefinitelyTyped\knockout\knockout.d.ts" />
+    <Content Include="src\inc\DefinitelyTyped\node\node.d.ts" />
+    <Content Include="src\core\exceptions.ts" />
     <Content Include="src\references.ts" />
-    <Content Include="src\eventHandler.ts" />
+    <Content Include="src\core\eventHandler.ts" />
     <Content Include="tools\node-webkit\ffmpegsumo.dll" />
     <Content Include="tools\node-webkit\icudt.dll" />
     <Content Include="tools\node-webkit\libEGL.dll" />
@@ -175,18 +183,27 @@
     <Content Include="tsd-config.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\application\" />
-    <Folder Include="lib\" />
+    <Folder Include="src\core\data-model\" />
+    <Folder Include="src\core\ui-controls\" />
+    <Folder Include="src\core\ui-panels\" />
+    <Folder Include="src\packages\css-lang\" />
+    <Folder Include="src\packages\html-lang\" />
+    <Folder Include="src\packages\json-lang\" />
+    <Folder Include="src\packages\md-lang\" />
+    <Folder Include="src\packages\ts-lang\" />
+    <Folder Include="src\packages\xml-lang\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\application\tide.js.map" />
+    <None Include="lib\tide.js.map" />
     <None Include="LICENSE" />
     <None Include="README.md" />
-    <None Include="src\definitions\DefinitelyTyped\ace\ace.d.key" />
-    <None Include="src\definitions\DefinitelyTyped\bootstrap\Bootstrap.d.key" />
-    <None Include="src\definitions\DefinitelyTyped\jquery\jquery.d.key" />
-    <None Include="src\definitions\DefinitelyTyped\knockout.mapping\knockout.mapping.d.key" />
-    <None Include="src\definitions\DefinitelyTyped\knockout\knockout.d.key" />
-    <None Include="src\definitions\DefinitelyTyped\node\node.d.key" />
+    <None Include="src\inc\DefinitelyTyped\ace\ace.d.key" />
+    <None Include="src\inc\DefinitelyTyped\bootstrap\Bootstrap.d.key" />
+    <None Include="src\inc\DefinitelyTyped\jquery\jquery.d.key" />
+    <None Include="src\inc\DefinitelyTyped\knockout.mapping\knockout.mapping.d.key" />
+    <None Include="src\inc\DefinitelyTyped\knockout\knockout.d.key" />
+    <None Include="src\inc\DefinitelyTyped\node\node.d.key" />
     <None Include="tools\node-webkit\nw.pak" />
   </ItemGroup>
   <Target Name="Clean">
