@@ -3,3 +3,5 @@ tide.csproj.user
 bin/application/*
 lib/*
 tools/node-webkit/*
+node_modules
+tide.v11.suo
