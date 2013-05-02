@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="doc-head">
+    <title>Tide</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="libs/bootstrap-2.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap-2.2.1/css/responsive.min.css" />
+    <script type="text/javascript" src="libs/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="libs/async.min.js"></script>
+    <script type="text/javascript" src="libs/moment.min.js"></script>
+    <script type="text/javascript" src="libs/marknote.js"></script>
+    <script type="text/javascript" src="libs/knockout-2.2.0.js"></script>
+    <script type="text/javascript" src="libs/knockout.mapping-2.0.js"></script>
+    <script type="text/javascript" src="libs/x2js-v1.0.8/xml2json.js"></script>
+    <script type="text/javascript" src="libs/bootstrap-2.2.1/js/bootstrap.js"></script>
+    <script type="text/javascript" src="libs/ace-build-11-5-2012/src-noconflict/ace.js"></script>
+    <script type="text/javascript" src="libs/jquery.ba-outside-events.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body id="doc-body">
+
+    <div style="position: absolute; top: 2px; left: 2px; right: 2px; bottom: 4px;">
+        <table style="width: 100%; height: 100%;" border="0">
+
+            <!-- The main menu -->
+            <tr style="height: 0%;">
+                <td>
+                    <div style="margin: 2px;" data-bind="template: Tide.TemplateFor(MainMenu)"></div>
+                </td>
+            </tr>
+
+            <!-- The main dock panel -->
+            <tr style="height: 100%;">
+                <td>
+                    <div style="height: 100%;" data-bind="template: Tide.TemplateFor(DockPanel)"></div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <!--a type="button" class="btn" href="#test_modal" data-toggle="modal">Add Image</a>
+    <div class="modal fade" id="test_modal">
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">&times;</a>
+            <h3>Modal Header</h3>
+        </div>
+        <div class="modal-body">
+            <p>Test Modal</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+            <a href="#" class="btn btn-primary">Save Changes</a>
+        </div>
+    </div-->
+
+    <script type="text/javascript">
+        // Set app culture and run.
+        Tide.App.UI.Locales.CurrentCulture = navigator.language.toLowerCase();
+        Tide.App.Run();
+    </script>
+</body>
+</html>

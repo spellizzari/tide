@@ -1,0 +1,58 @@
+﻿/* ===================== Bootstrap Overrides ================== */
+
+.dropdown-menu
+{
+    padding: 2px 0px !important; /* reduces vertical padding inside dropdown menus */
+    margin: 0px !important; /* makes the dropdown menu vertically closer to the parent menu item */
+    /* changes the rounding of the borders */
+    -webkit-border-radius: 3px !important;
+    -webkit-border-top-left-radius: 0px !important;
+    -webkit-border-top-right-radius: 0px !important;
+    -moz-border-radius: 3px !important;
+    -moz-border-radius-topleft: 0px !important;
+    -moz-border-radius-topright: 0px !important;
+    border-radius: 3px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+.dropdown-menu .divider
+{
+    margin: 2px 1px !important; /* makes dividers smaller vertically */
+}
+
+.dropdown-menu:before, .dropdown-menu:after
+{
+    display: none !important; /* hides the triangle at the top of dropdown menus */
+}
+
+.dropdown-menu li > a
+{
+    padding: 3px 20px 3px 10px !important; /* shortens the horizontal gap between a menu item and the left border of the dropdown menu */
+}
+
+.navbar
+{
+    margin-bottom: 2px !important; /* shortens the vertical gap between the navbar and elements under it */
+}
+
+.navbar .nav > li > a
+{
+    padding: 3px 10px 3px !important; /* shortens the gap between elements on a navbar */
+}
+
+/* ===================== Application Styles ================== */
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #2E3F5E;
+}

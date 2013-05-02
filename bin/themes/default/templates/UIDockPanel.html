@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<style>
+    .ui-verticalsplitter
+    {
+        width: 6px;
+        cursor: e-resize;
+    }
+
+    .ui-horizontalsplitter
+    {
+        height: 6px;
+        cursor: n-resize;
+    }
+
+    .ui-verticalsplitter-neighbor-lhs
+    {
+        margin-right: 6px; /* must be equal to the width of a vertical splitter */
+    }
+
+    .ui-verticalsplitter-neighbor-rhs
+    {
+        padding-left: 6px; /* must be equal to the width of a vertical splitter */
+    }
+
+    .ui-splitterghost
+    {
+        z-index: 9999;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .ui-html-verticalresize
+    {
+        cursor: e-resize !important;
+    }
+
+    .ui-html-horizontalresize
+    {
+        cursor: n-resize !important;
+    }
+
+    .ui-vertical
+    {
+        margin-top: -18px;
+        white-space: nowrap;
+        -webkit-transform: rotate(90deg);
+        -webkit-transform-origin: bottom left;
+    }
+
+    .ui-dockpane-btn
+    {
+        color: #fff !important;
+        padding-bottom: 4px;
+        border-bottom: 4px solid #506CA0;
+        -webkit-font-smoothing: antialiased;
+    }
+</style>
+<script type="text/html">
+    <table style="position: relative; width: 100%; height: 100%;" border="0">
+        <tbody>
+
+            <!-- =========================================================================
+                 Top dock
+                 ========================================================================= -->
+
+            <!-- ko foreach: { data: _bindingTopPanes(), as: 'pane' } -->
+            <!-- ko ifnot: pane._bindingIsAutoHide() -->
+            <tr style="height: 0%;">
+                <td>
+                    <div data-bind="style: { height: pane._bindingCanResize() ? pane._bindingPaneSize() + 'px' : 'inherit' }">
+                        <!-- ko template: { name: 'templateof-UIDockPane', data: pane } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- ko if: pane._bindingCanResize() -->
+                    <div class="ui-horizontalsplitter" data-bind="event: { mousedown: pane.OnSplitterMouseDown }"></div>
+                    <!-- /ko -->
+                </td>
+            </tr>
+            <!-- /ko -->
+            <!-- /ko -->
+
+            <tr style="height: 100%;">
+                <td>
+
+                    <!-- =========================================================================
+                         Left Dock (auto-hide)
+                         ========================================================================= -->
+
+                    <!-- ko if: _bindingLeftPanes().some(function(item) { return item._bindingIsAutoHide(); }) -->
+                    <div style="width: 24px; height: 100%; float: left; padding-left: 4px;">
+                        <div class="ui-vertical" data-bind="foreach: { data: _bindingLeftPanes(), as: 'pane' }">
+                            <!-- if: pane._bindingIsAutoHide() -->
+                            <span class="ui-dockpane-btn" data-bind="text: pane._bindingPaneTitle(), click: pane.OnAutoHideButtonClick, css: { 'active': pane._bindingIsAutoHideVisible() }"></span>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                    <!-- /ko -->
+
+                    <!-- =========================================================================
+                         Left Dock
+                         ========================================================================= -->
+
+                    <!-- ko foreach: { data: _bindingLeftPanes(), as: 'pane' } -->
+                    <!-- ko ifnot: pane._bindingIsAutoHide() -->
+                    <div style="height: 100%; float: left;">
+                        <!-- ko if: pane._bindingCanResize() -->
+                        <div class="ui-verticalsplitter" style="float: right; height: 100%;" data-bind="event: { mousedown: pane.OnSplitterMouseDown }"></div>
+                        <!-- /ko -->
+                        <div style="height: 100%;" data-bind="css: { 'ui-verticalsplitter-neighbor-lhs': pane._bindingCanResize() }, style: { width: pane._bindingCanResize() ? pane._bindingPaneSize() + 'px' : 'inherit' }">
+                            <!-- ko template: { name: 'templateof-UIDockPane', data: pane } -->
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <!-- /ko -->
+
+                    <!-- =========================================================================
+                         Right Dock
+                         ========================================================================= -->
+
+                    <!-- ko foreach: { data: _bindingRightPanes().slice(0).reverse(), as: 'pane' } -->
+                    <!-- ko ifnot: pane._bindingIsAutoHide() -->
+                    <div style="height: 100%; float: right;">
+                        <!-- ko if: pane._bindingCanResize() -->
+                        <div class="ui-verticalsplitter" style="float: left; height: 100%;" data-bind="event: { mousedown: pane.OnSplitterMouseDown }"></div>
+                        <!-- /ko -->
+                        <div style="height: 100%;" data-bind="css: { 'ui-verticalsplitter-neighbor-rhs': pane._bindingCanResize() }, style: { width: pane._bindingCanResize() ? pane._bindingPaneSize() + 'px' : 'inherit' }">
+                            <!-- ko template: { name: 'templateof-UIDockPane', data: pane } -->
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <!-- /ko -->
+
+                    <div style="height: 100%; overflow: hidden;">
+                        <!-- =========================================================================
+                             Visible Left Auto-Hide Dock Panes
+                             ========================================================================= -->
+
+                        <!-- ko foreach: { data: _bindingLeftPanes(), as: 'pane' } -->
+                        <!-- ko if: pane._bindingIsAutoHide() && pane._bindingIsAutoHideVisible() -->
+                        <div style="height: 100%; float: left;" data-bind="event: { clickoutside: pane.OnAutoHideOutsideClick }">
+                            <!-- ko if: pane._bindingCanResize() -->
+                            <div class="ui-verticalsplitter" style="float: right; height: 100%;" data-bind="event: { mousedown: pane.OnSplitterMouseDown }"></div>
+                            <!-- /ko -->
+                            <div style="height: 100%;" data-bind="css: { 'ui-verticalsplitter-neighbor-lhs': pane._bindingCanResize() }, style: { width: pane._bindingCanResize() ? pane._bindingPaneSize() + 'px' : 'inherit' }">
+                                <!-- ko template: { name: 'templateof-UIDockPane', data: pane } -->
+                                <!-- /ko -->
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- =========================================================================
+                             Center Dock
+                             ========================================================================= -->
+
+                        <!-- ko if: (_bindingCenterPane() !== null) -->
+                        <div style="height: 100%;">
+                            <!-- ko template: { name: 'templateof-UIDockPane', data: pane } -->
+                            <!-- /ko -->
+                        </div>
+                        <!-- /ko -->
+                    </div>
+
+                </td>
+            </tr>
+
+            <!-- =========================================================================
+                 Bottom dock
+                 ========================================================================= -->
+
+            <!-- ko foreach: { data: _bindingBottomPanes().slice(0).reverse(), as: 'pane' } -->
+            <!-- ko ifnot: pane._bindingIsAutoHide() -->
+            <tr style="height: 0%;">
+                <td>
+                    <!-- ko if: pane._bindingCanResize() -->
+                    <div class="ui-horizontalsplitter" data-bind="event: { mousedown: pane.OnSplitterMouseDown }"></div>
+                    <!-- /ko -->
+                    <div style="width: 100%;" data-bind="style: { height: pane._bindingCanResize() ? pane._bindingPaneSize() + 'px' : 'inherit' }">
+                        <!-- ko template: { name: 'templateof-UIDockPane', data: pane } -->
+                        <!-- /ko -->
+                    </div>
+                </td>
+            </tr>
+            <!-- /ko -->
+            <!-- /ko -->
+        </tbody>
+    </table>
+</script>

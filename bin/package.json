@@ -1,0 +1,13 @@
+﻿{
+    "name": "tide",
+    "description": "TypeScript Integrated Development Environment",
+    "version": "0.1",
+    "main": "app.html",
+    "window":
+    {
+        "icon": "data/icons/app-16.png",
+        "width": 1280,
+        "height": 720,
+        "toolbar": true
+    }
+}

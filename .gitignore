@@ -1,0 +1,5 @@
+npm-debug.log
+tide.csproj.user
+bin/application/*
+lib/*
+tools/node-webkit/*

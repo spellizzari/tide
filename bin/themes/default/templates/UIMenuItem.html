@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<style>
+    .ui-menuitem-icon
+    {
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin-right: 4px;
+    }
+
+    .ui-menuitem-shortcut
+    {
+        float: right;
+    }
+
+    a.disabled-link,
+    a.disabled-link:visited,
+    a.disabled-link:active,
+    a.disabled-link:hover
+    {
+        color: #aaa !important;
+    }
+</style>
+<script type="text/html">
+    <!-- The menu item. The class "dropdown-submenu" is only set if the item has submenus and isn't a root item, otherwise "dropdown" is set for all root items. -->
+    <li data-bind="css: { 'dropdown-submenu': SubItems.CountBinding() > 0 &amp;&amp; ParentItemBinding(), 'dropdown': !ParentItemBinding() }">
+        <!-- The display of the menu item. -->
+        <a href="#" data-bind="css: { 'dropdown-toggle': SubItems.CountBinding() > 0, 'disabled-link': !IsEnabledBinding() }, attr: { 'data-toggle': SubItems.CountBinding() > 0 ? 'dropdown' : '' }, click: Click">
+            <!-- The menu item icon -->
+            <img class="ui-menuitem-icon" data-bind="visible: IconPathBinding(), attr: { 'src': IconPathBinding() }" />
+            <!-- The menu item text -->
+            <!-- ko text: TextBinding() -->
+            <!-- /ko -->
+            <!-- The shortcut key -->
+            <span class="ui-menuitem-shortcut" data-bind="visible: ShortcutTextBinding(), text: ShortcutTextBinding()"></span>
+        </a>
+        <!-- The HTML element holding submenu items, onlu visible if we have submenus. -->
+        <ul class="dropdown-menu" data-bind="visible: SubItems.CountBinding() > 0, foreach: SubItems.ItemsBinding()">
+            <!-- Separator if group is different than previous group -->
+            <!-- ko if: IsFirstOfGroupBinding() -->
+            <li class="divider"></li>
+            <!-- /ko -->
+            <!-- Instantiate the template -->
+            <!-- ko template: { name: 'templateof-UIMenuItem', data: $data } -->
+            <!-- /ko -->
+        </ul>
+    </li>
+</script>

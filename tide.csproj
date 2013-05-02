@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- See http://msdn.microsoft.com/en-us/library/c02as0cs.aspx for a list of common macros -->
+  <PropertyGroup>
+    <ProjectGuid>{A883055A-5B63-42BD-A349-8B5776DC8DEC}</ProjectGuid>
+    <ProjectTypeGuids>{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <OutputPath>.\</OutputPath>
+    <IntermediateOutputPath>$(TEMP)</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>$(TEMP)</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="definitions\DefinitelyTyped\ace\ace.d.ts" />
+    <Content Include="definitions\DefinitelyTyped\async\async.d.ts" />
+    <Content Include="definitions\DefinitelyTyped\bootstrap\Bootstrap.d.ts" />
+    <Content Include="definitions\DefinitelyTyped\jquery\jquery.d.ts" />
+    <Content Include="definitions\DefinitelyTyped\knockout.mapping\knockout.mapping.d.ts" />
+    <Content Include="definitions\DefinitelyTyped\knockout\knockout.d.ts" />
+    <Content Include="definitions\DefinitelyTyped\node\node.d.ts" />
+    <Content Include="Jakefile.js" />
+    <TypeScriptCompile Include="sources\framework\References.ts" />
+    <Content Include="output\package\components\ace\ace.js" />
+    <Content Include="output\package\components\ace\ext-elastic_tabstops_lite.js" />
+    <Content Include="output\package\components\ace\ext-emmet.js" />
+    <Content Include="output\package\components\ace\ext-searchbox.js" />
+    <Content Include="output\package\components\ace\ext-spellcheck.js" />
+    <Content Include="output\package\components\ace\ext-static_highlight.js" />
+    <Content Include="output\package\components\ace\ext-textarea.js" />
+    <Content Include="output\package\components\ace\ext-whitespace.js" />
+    <Content Include="output\package\components\ace\keybinding-emacs.js" />
+    <Content Include="output\package\components\ace\keybinding-vim.js" />
+    <Content Include="output\package\components\ace\mode-abap.js" />
+    <Content Include="output\package\components\ace\mode-asciidoc.js" />
+    <Content Include="output\package\components\ace\mode-c9search.js" />
+    <Content Include="output\package\components\ace\mode-clojure.js" />
+    <Content Include="output\package\components\ace\mode-coffee.js" />
+    <Content Include="output\package\components\ace\mode-coldfusion.js" />
+    <Content Include="output\package\components\ace\mode-csharp.js" />
+    <Content Include="output\package\components\ace\mode-css.js" />
+    <Content Include="output\package\components\ace\mode-curly.js" />
+    <Content Include="output\package\components\ace\mode-c_cpp.js" />
+    <Content Include="output\package\components\ace\mode-dart.js" />
+    <Content Include="output\package\components\ace\mode-diff.js" />
+    <Content Include="output\package\components\ace\mode-django.js" />
+    <Content Include="output\package\components\ace\mode-dot.js" />
+    <Content Include="output\package\components\ace\mode-ftl.js" />
+    <Content Include="output\package\components\ace\mode-glsl.js" />
+    <Content Include="output\package\components\ace\mode-golang.js" />
+    <Content Include="output\package\components\ace\mode-groovy.js" />
+    <Content Include="output\package\components\ace\mode-haml.js" />
+    <Content Include="output\package\components\ace\mode-haxe.js" />
+    <Content Include="output\package\components\ace\mode-html.js" />
+    <Content Include="output\package\components\ace\mode-jade.js" />
+    <Content Include="output\package\components\ace\mode-java.js" />
+    <Content Include="output\package\components\ace\mode-javascript.js" />
+    <Content Include="output\package\components\ace\mode-json.js" />
+    <Content Include="output\package\components\ace\mode-jsp.js" />
+    <Content Include="output\package\components\ace\mode-jsx.js" />
+    <Content Include="output\package\components\ace\mode-latex.js" />
+    <Content Include="output\package\components\ace\mode-less.js" />
+    <Content Include="output\package\components\ace\mode-liquid.js" />
+    <Content Include="output\package\components\ace\mode-lisp.js" />
+    <Content Include="output\package\components\ace\mode-livescript.js" />
+    <Content Include="output\package\components\ace\mode-logiql.js" />
+    <Content Include="output\package\components\ace\mode-lsl.js" />
+    <Content Include="output\package\components\ace\mode-lua.js" />
+    <Content Include="output\package\components\ace\mode-luapage.js" />
+    <Content Include="output\package\components\ace\mode-lucene.js" />
+    <Content Include="output\package\components\ace\mode-makefile.js" />
+    <Content Include="output\package\components\ace\mode-markdown.js" />
+    <Content Include="output\package\components\ace\mode-mushcode.js" />
+    <Content Include="output\package\components\ace\mode-mushcode_high_rules.js" />
+    <Content Include="output\package\components\ace\mode-objectivec.js" />
+    <Content Include="output\package\components\ace\mode-ocaml.js" />
+    <Content Include="output\package\components\ace\mode-pascal.js" />
+    <Content Include="output\package\components\ace\mode-perl.js" />
+    <Content Include="output\package\components\ace\mode-pgsql.js" />
+    <Content Include="output\package\components\ace\mode-php.js" />
+    <Content Include="output\package\components\ace\mode-powershell.js" />
+    <Content Include="output\package\components\ace\mode-python.js" />
+    <Content Include="output\package\components\ace\mode-r.js" />
+    <Content Include="output\package\components\ace\mode-rdoc.js" />
+    <Content Include="output\package\components\ace\mode-rhtml.js" />
+    <Content Include="output\package\components\ace\mode-ruby.js" />
+    <Content Include="output\package\components\ace\mode-sass.js" />
+    <Content Include="output\package\components\ace\mode-scad.js" />
+    <Content Include="output\package\components\ace\mode-scala.js" />
+    <Content Include="output\package\components\ace\mode-scheme.js" />
+    <Content Include="output\package\components\ace\mode-scss.js" />
+    <Content Include="output\package\components\ace\mode-sh.js" />
+    <Content Include="output\package\components\ace\mode-sql.js" />
+    <Content Include="output\package\components\ace\mode-stylus.js" />
+    <Content Include="output\package\components\ace\mode-svg.js" />
+    <Content Include="output\package\components\ace\mode-tcl.js" />
+    <Content Include="output\package\components\ace\mode-tex.js" />
+    <Content Include="output\package\components\ace\mode-text.js" />
+    <Content Include="output\package\components\ace\mode-textile.js" />
+    <Content Include="output\package\components\ace\mode-tmsnippet.js" />
+    <Content Include="output\package\components\ace\mode-toml.js" />
+    <Content Include="output\package\components\ace\mode-typescript.js" />
+    <Content Include="output\package\components\ace\mode-vbscript.js" />
+    <Content Include="output\package\components\ace\mode-velocity.js" />
+    <Content Include="output\package\components\ace\mode-xml.js" />
+    <Content Include="output\package\components\ace\mode-xquery.js" />
+    <Content Include="output\package\components\ace\mode-yaml.js" />
+    <Content Include="output\package\components\ace\theme-ambiance.js" />
+    <Content Include="output\package\components\ace\theme-chaos.js" />
+    <Content Include="output\package\components\ace\theme-chrome.js" />
+    <Content Include="output\package\components\ace\theme-clouds.js" />
+    <Content Include="output\package\components\ace\theme-clouds_midnight.js" />
+    <Content Include="output\package\components\ace\theme-cobalt.js" />
+    <Content Include="output\package\components\ace\theme-crimson_editor.js" />
+    <Content Include="output\package\components\ace\theme-dawn.js" />
+    <Content Include="output\package\components\ace\theme-dreamweaver.js" />
+    <Content Include="output\package\components\ace\theme-eclipse.js" />
+    <Content Include="output\package\components\ace\theme-github.js" />
+    <Content Include="output\package\components\ace\theme-idle_fingers.js" />
+    <Content Include="output\package\components\ace\theme-kr.js" />
+    <Content Include="output\package\components\ace\theme-merbivore.js" />
+    <Content Include="output\package\components\ace\theme-merbivore_soft.js" />
+    <Content Include="output\package\components\ace\theme-monokai.js" />
+    <Content Include="output\package\components\ace\theme-mono_industrial.js" />
+    <Content Include="output\package\components\ace\theme-pastel_on_dark.js" />
+    <Content Include="output\package\components\ace\theme-solarized_dark.js" />
+    <Content Include="output\package\components\ace\theme-solarized_light.js" />
+    <Content Include="output\package\components\ace\theme-terminal.js" />
+    <Content Include="output\package\components\ace\theme-textmate.js" />
+    <Content Include="output\package\components\ace\theme-tomorrow.js" />
+    <Content Include="output\package\components\ace\theme-tomorrow_night.js" />
+    <Content Include="output\package\components\ace\theme-tomorrow_night_blue.js" />
+    <Content Include="output\package\components\ace\theme-tomorrow_night_bright.js" />
+    <Content Include="output\package\components\ace\theme-tomorrow_night_eighties.js" />
+    <Content Include="output\package\components\ace\theme-twilight.js" />
+    <Content Include="output\package\components\ace\theme-vibrant_ink.js" />
+    <Content Include="output\package\components\ace\theme-xcode.js" />
+    <Content Include="output\package\components\ace\worker-coffee.js" />
+    <Content Include="output\package\components\ace\worker-css.js" />
+    <Content Include="output\package\components\ace\worker-javascript.js" />
+    <Content Include="output\package\components\ace\worker-json.js" />
+    <Content Include="output\package\components\ace\worker-lua.js" />
+    <Content Include="output\package\components\ace\worker-php.js" />
+    <Content Include="output\package\components\ace\worker-xquery.js" />
+    <Content Include="output\package\components\async\async.js" />
+    <Content Include="output\package\components\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="output\package\components\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="output\package\components\bootstrap\css\bootstrap.css" />
+    <Content Include="output\package\components\bootstrap\css\bootstrap.min.css" />
+    <Content Include="output\package\components\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="output\package\components\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="output\package\components\bootstrap\js\bootstrap.js" />
+    <Content Include="output\package\components\bootstrap\js\bootstrap.min.js" />
+    <Content Include="output\package\components\jquery\jquery-2.0.0.min.js" />
+    <Content Include="output\package\components\knockout\knockout-2.2.1.js" />
+    <Content Include="output\package\components\knockout\knockout.mapping-2.0.js" />
+    <Content Include="output\package\index.html" />
+    <Content Include="output\package\package.json" />
+    <Content Include="output\package\themes\default\style.css" />
+    <Content Include="output\package\themes\default\templates\UIDockPane.html" />
+    <Content Include="output\package\themes\default\templates\UIMenuBar.html" />
+    <Content Include="sources\data\icons\app-16.png" />
+    <Content Include="sources\data\icons\app.png" />
+    <Content Include="sources\data\Locales.xml" />
+    <Content Include="sources\framework\Utils.ts" />
+    <Content Include="sources\framework\EventHandler.ts" />
+    <Content Include="sources\framework\Exceptions.ts" />
+    <Content Include="sources\index.html" />
+    <Content Include="sources\package.json" />
+    <Content Include="sources\themes\default\style.css" />
+    <Content Include="sources\themes\default\templates\UIDockPane.html" />
+    <Content Include="sources\themes\default\templates\UIDockPanel.html" />
+    <Content Include="sources\themes\default\templates\UIMenuBar.html" />
+    <Content Include="sources\themes\default\templates\UIMenuItem.html" />
+    <Content Include="sources\tide.ts" />
+    <Content Include="tsd-config.json" />
+    <TypeScriptCompile Include="sources\app.ts" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="definitions\DefinitelyTyped\ace\ace.d.key" />
+    <None Include="definitions\DefinitelyTyped\async\async.d.key" />
+    <None Include="definitions\DefinitelyTyped\bootstrap\Bootstrap.d.key" />
+    <None Include="definitions\DefinitelyTyped\jquery\jquery.d.key" />
+    <None Include="definitions\DefinitelyTyped\knockout.mapping\knockout.mapping.d.key" />
+    <None Include="definitions\DefinitelyTyped\knockout\knockout.d.key" />
+    <None Include="definitions\DefinitelyTyped\node\node.d.key" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <Target Name="Clean">
+    <Exec WorkingDirectory="$(ProjectDir)" Command="jake clean" IgnoreExitCode="True">
+      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
+    </Exec>
+    <Error Condition=" $(ExitCode) != 0" />
+  </Target>
+  <Target Name="Build">
+    <Exec WorkingDirectory="$(ProjectDir)" Command="jake build" IgnoreExitCode="True">
+      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
+    </Exec>
+    <Error Condition=" $(ExitCode) != 0" />
+  </Target>
+  <Target Name="Rebuild">
+    <Exec WorkingDirectory="$(ProjectDir)" Command="jake rebuild" IgnoreExitCode="True">
+      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
+    </Exec>
+    <Error Condition=" $(ExitCode) != 0" />
+  </Target>
+</Project>

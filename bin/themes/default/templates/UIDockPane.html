@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<style>
+    .ui-pane
+    {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0px;
+        height: 100%;
+        border: 0;
+        -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 3px 0px inset;
+        -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 3px 0px inset;
+        -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 3px 0px inset;
+        box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 3px 0px inset;
+    }
+
+    .ui-paneheader
+    {
+        color: white;
+        height: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: #506CA0;
+        -webkit-border-radius: 3px !important;
+        -webkit-border-bottom-left-radius: 0px !important;
+        -webkit-border-bottom-right-radius: 0px !important;
+        -moz-border-radius: 3px !important;
+        -moz-border-radius-bottomleft: 0px !important;
+        -moz-border-radius-bottomright: 0px !important;
+        border-radius: 3px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    .ui-paneheader-button
+    {
+        width: 14px;
+        height: 20px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 12px;
+        text-align: center;
+        vertical-align: central;
+    }
+</style>
+<script type="text/html">
+    <!-- ko if: _bindingHasHeader() -->
+    <div class="well ui-pane">
+        <div class="ui-paneheader">
+            <span data-bind="text: _bindingPaneTitle()"></span>
+            <div style="float: right;">
+                <!--div class="ui-paneheader-button dropdown">
+                    <i class="ui-paneheader-button icon-sort-down" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a tabindex="-1" href="#">Action</a></li>
+                        <li><a tabindex="-1" href="#">Another action</a></li>
+                        <li><a tabindex="-1" href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#">Separated link</a></li>
+                    </ul>
+                </div-->
+                <div class="ui-paneheader-button" data-bind="click: ToggleAutoHide">
+                    <i class="ui-paneheader-button icon-pushpin"></i>
+                </div>
+                <div class="ui-paneheader-button">
+                    <i class="ui-paneheader-button icon-remove"></i>
+                </div>
+            </div>
+        </div>
+        <!-- ko template: Tide.TemplateFor(Control) -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    <!-- ko ifnot: _bindingHasHeader() -->
+    <!-- ko template: Tide.TemplateFor(Control) -->
+    <!-- /ko -->
+    <!-- /ko -->
+</script>
